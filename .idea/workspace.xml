@@ -18,8 +18,8 @@
       <file leaf-file-name="TP3.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TP3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1095">
-              <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+            <state relative-caret-position="1155">
+              <caret line="77" column="19" lean-forward="true" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -43,7 +43,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="83" />
+    <option name="x" value="36" />
     <option name="y" value="23" />
     <option name="width" value="1350" />
     <option name="height" value="815" />
@@ -227,11 +227,18 @@
       <option name="project" value="LOCAL" />
       <updated>1497474925189</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="J'ai placé les classes en début de programme pour que l'on puisse les utilisés lorsqu'un évenement se produit">
+      <created>1497475120725</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1497475120725</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="83" y="23" width="1350" height="815" extended-state="0" />
+    <frame x="36" y="23" width="1350" height="815" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26666668" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -262,7 +269,8 @@
     <MESSAGE value="J'ai rajouté les boutons de l'interface." />
     <MESSAGE value="J'ai ajouté les attributs des classes personnages et guerriers" />
     <MESSAGE value="J'ai ajouté les attributs de la classe Sorcier" />
-    <option name="LAST_COMMIT_MESSAGE" value="J'ai ajouté les attributs de la classe Sorcier" />
+    <MESSAGE value="J'ai placé les classes en début de programme pour que l'on puisse les utilisés lorsqu'un évenement se produit" />
+    <option name="LAST_COMMIT_MESSAGE" value="J'ai placé les classes en début de programme pour que l'on puisse les utilisés lorsqu'un évenement se produit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -287,8 +295,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TP3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+        <state relative-caret-position="1155">
+          <caret line="77" column="19" lean-forward="true" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
           <folding />
         </state>
       </provider>
