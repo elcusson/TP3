@@ -18,8 +18,8 @@
       <file leaf-file-name="TP3.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TP3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="72" column="4" lean-forward="false" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
+            <state relative-caret-position="1095">
+              <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -220,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497474385704</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="J'ai ajouté les attributs de la classe Sorcier">
+      <created>1497474925189</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1497474925189</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -254,7 +261,8 @@
     <MESSAGE value="J'essaye les interfaces graphiques." />
     <MESSAGE value="J'ai rajouté les boutons de l'interface." />
     <MESSAGE value="J'ai ajouté les attributs des classes personnages et guerriers" />
-    <option name="LAST_COMMIT_MESSAGE" value="J'ai ajouté les attributs des classes personnages et guerriers" />
+    <MESSAGE value="J'ai ajouté les attributs de la classe Sorcier" />
+    <option name="LAST_COMMIT_MESSAGE" value="J'ai ajouté les attributs de la classe Sorcier" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -279,8 +287,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TP3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="72" column="4" lean-forward="false" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
+        <state relative-caret-position="1095">
+          <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
           <folding />
         </state>
       </provider>
