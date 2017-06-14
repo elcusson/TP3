@@ -1,11 +1,25 @@
 # Anthony Gagnon: 111 129 416
 # Louis Cusson: 111 142 104
 
+def doNothing():
+    print("C'est juste un test pour le drop down menu.")
+
 # Importe les classes contenues dans le module tkinter
 from tkinter import *
 
 # utilisation de la classe Tk() qui fait apparaître une fenêtre
 fenetre1 = Tk()
+
+menu_fichier = Menu(fenetre1)
+fenetre1.config(menu = menu_fichier)
+
+subMenu1 = Menu(menu_fichier)
+menu_fichier.add_cascade(label = "Fichier", menu = subMenu1)
+subMenu1.add_command(label = "Ouvrir", command = doNothing)
+subMenu1.add_command(label = "Enregistrer", command = doNothing)
+subMenu1.add_command(label = "Enregistrer Sous", command = doNothing)
+subMenu1.add_command(label = "Fermer", command = doNothing)
+subMenu1.add_command(label = "Quitter", command = doNothing)
 
 # Création d'un objet/widget avec la classe Label()
 texte1 = Label(fenetre1, text = "La fenêtre principal se tient ici.", fg = "red")
