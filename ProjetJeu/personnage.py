@@ -49,6 +49,15 @@ class Personnage:
 
 
     def valider_energie_courante(self, energie_courante):
+
+        energie_courante = float(input("Veuillez insérer l'énergie courante du personnage:"))
+
+        if energie_courante < 0 or if energie_courante > energie_max:
+            return False
+        else:
+            return True
+
+
         """
         Valide l'énergie courante. Elle doit être positive (0 inclus) et ne doit pas dépasser energie_max.
         Args:
