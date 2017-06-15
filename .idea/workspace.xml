@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7acd11ab-2d11-4a2a-aa6b-e5fc987aa960" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TP3.py" afterPath="$PROJECT_DIR$/TP3.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,8 +17,13 @@
       <file leaf-file-name="TP3.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TP3.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="1155">
               <caret line="77" column="19" lean-forward="true" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
+=======
+            <state relative-caret-position="240">
+              <caret line="16" column="60" lean-forward="false" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
+>>>>>>> Stashed changes
               <folding />
             </state>
           </provider>
@@ -43,7 +47,11 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< Updated upstream
     <option name="x" value="36" />
+=======
+    <option name="x" value="37" />
+>>>>>>> Stashed changes
     <option name="y" value="23" />
     <option name="width" value="1350" />
     <option name="height" value="815" />
@@ -63,7 +71,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< Updated upstream
       <pane id="Scratches" />
+=======
+>>>>>>> Stashed changes
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -78,6 +89,10 @@
           </PATH>
         </subPane>
       </pane>
+<<<<<<< Updated upstream
+=======
+      <pane id="Scratches" />
+>>>>>>> Stashed changes
       <pane id="Scope" />
     </panes>
   </component>
@@ -213,6 +228,7 @@
       <option name="project" value="LOCAL" />
       <updated>1497412051621</updated>
     </task>
+<<<<<<< Updated upstream
     <task id="LOCAL-00003" summary="J'ai ajouté les attributs des classes personnages et guerriers">
       <created>1497474385704</created>
       <option name="number" value="00003" />
@@ -239,12 +255,30 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="36" y="23" width="1350" height="815" extended-state="0" />
+=======
+    <task id="LOCAL-00003" summary="J'ai rajoutéle menu &quot;Fichier&quot; avec les options &quot;Ouvrir&quot;, &quot;Enregistrer&quot;, etc.">
+      <created>1497413696314</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1497413696314</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="37" y="23" width="1350" height="873" extended-state="0" />
+>>>>>>> Stashed changes
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26666668" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+<<<<<<< Updated upstream
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35120642" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34950247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> Stashed changes
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -267,10 +301,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="J'essaye les interfaces graphiques." />
     <MESSAGE value="J'ai rajouté les boutons de l'interface." />
+<<<<<<< Updated upstream
     <MESSAGE value="J'ai ajouté les attributs des classes personnages et guerriers" />
     <MESSAGE value="J'ai ajouté les attributs de la classe Sorcier" />
     <MESSAGE value="J'ai placé les classes en début de programme pour que l'on puisse les utilisés lorsqu'un évenement se produit" />
     <option name="LAST_COMMIT_MESSAGE" value="J'ai placé les classes en début de programme pour que l'on puisse les utilisés lorsqu'un évenement se produit" />
+=======
+    <MESSAGE value="J'ai rajoutéle menu &quot;Fichier&quot; avec les options &quot;Ouvrir&quot;, &quot;Enregistrer&quot;, etc." />
+    <option name="LAST_COMMIT_MESSAGE" value="J'ai rajoutéle menu &quot;Fichier&quot; avec les options &quot;Ouvrir&quot;, &quot;Enregistrer&quot;, etc." />
+>>>>>>> Stashed changes
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -295,8 +334,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TP3.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="1155">
           <caret line="77" column="19" lean-forward="true" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
+=======
+        <state relative-caret-position="240">
+          <caret line="16" column="60" lean-forward="false" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
+>>>>>>> Stashed changes
           <folding />
         </state>
       </provider>
