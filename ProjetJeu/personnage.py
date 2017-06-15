@@ -57,16 +57,6 @@ class Personnage:
         else:
             return True
 
-
-        """
-        Valide l'énergie courante. Elle doit être positive (0 inclus) et ne doit pas dépasser energie_max.
-        Args:
-            energie_courante (int): L'énergie à valider.
-
-        Returns (bool): True si l'énergie est valide, False sinon.
-
-        """
-
     def valider_energie_depart(self, energie_depart):
         """
         Valide l'énergie de départ. Elle est valide lorsqu’elle est entre energie_depart_min et 

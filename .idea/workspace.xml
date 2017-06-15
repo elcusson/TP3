@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7acd11ab-2d11-4a2a-aa6b-e5fc987aa960" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/TP3.iml" afterPath="$PROJECT_DIR$/.idea/TP3.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProjetJeu/personnage.py" afterPath="$PROJECT_DIR$/ProjetJeu/personnage.py" />
     </list>
@@ -30,8 +28,8 @@
       <file leaf-file-name="personnage.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ProjetJeu/personnage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-249">
-              <caret line="56" column="13" lean-forward="true" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+            <state relative-caret-position="254">
+              <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -376,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497475120725</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="changement energie courante">
+      <created>1497568217515</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1497568217515</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -412,7 +417,8 @@
     <MESSAGE value="J'ai ajouté les attributs des classes personnages et guerriers" />
     <MESSAGE value="J'ai ajouté les attributs de la classe Sorcier" />
     <MESSAGE value="J'ai placé les classes en début de programme pour que l'on puisse les utilisés lorsqu'un évenement se produit" />
-    <option name="LAST_COMMIT_MESSAGE" value="J'ai placé les classes en début de programme pour que l'on puisse les utilisés lorsqu'un évenement se produit" />
+    <MESSAGE value="changement energie courante" />
+    <option name="LAST_COMMIT_MESSAGE" value="changement energie courante" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -487,6 +493,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -507,8 +514,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ProjetJeu/personnage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-249">
-          <caret line="56" column="13" lean-forward="true" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+        <state relative-caret-position="254">
+          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding />
         </state>
       </provider>
