@@ -7,7 +7,7 @@ from guerrier import Guerrier
 
 class GestionPersonnages:
     """
-    Classe s'occupant de la gestion des personnages. 
+    Classe s'occupant de la gestion des personnages.
     Attributes:
         liste_personnages (list): La liste des personnages
         fichier_courant (str): Le nom du fichier courant

@@ -1,16 +1,15 @@
-class Personnage:
-    """
-    Attributes:
-        energie_depart_defaut (int): L'énergie de départ par défaut
-        energie_depart_min (int): L'énergie de départ minimum
-        energie_max (int): L'énergie maximum en tout temps
-        longueur_nom_min (int) : La longueur minimale du nom
-        longueur_nom_max (int) : La longueur maximale du nom
-        nom (str) : Le nom
-        energie_depart (int): L'énergie de départ
-        energie_courante (int): L'énergie courante
 
-    """
+
+class Personnage:
+    energie_depart_defaut = 20
+    energie_depart_min = 1
+    energie_max = 100
+    longueur_nom_min = 3
+    longueur_nom_max = 30
+    nom= ""
+    energie_depart = 0
+    energie_courante = 0
+
     def __init__(self, nom, energie_depart):
         """
         Le constructeur du Personnage. Il doit initialiser le nom, l’énergie de départ et l’énergie courante. 
@@ -40,14 +39,13 @@ class Personnage:
 
 
     def valider_nom(self, nom):
-        """
-        Valide le nom du personnage. Un nom de personnage est valide lorsqu’il a la bonne longueur 
-        (entre min et max) bornes incluses.
-        Args:
-            nom (str): Le nom à valider
 
-        Returns (bool): True si le nom est valide, False sinon.
-        """
+        nom = input("Veuillez insérer le nom du personnage:")
+
+        if len(nom) < longueur_nom_min or len(nom) > longueur_nom_max:
+            return False
+        else:
+            return True
 
 
     def valider_energie_courante(self, energie_courante):

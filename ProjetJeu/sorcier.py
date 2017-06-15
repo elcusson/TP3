@@ -1,11 +1,8 @@
 class Sorcier( ):
-    """
-    Classe représentant un Sorcier. Hérite de Personnage.
-    Attributes:
-        nb_charmes_defaut (int): Le nombre de charmes par défaut
-        nb_charmes_max (int): Le nombre de charmes maximum
-        nb_charmes (int): Le nombre de charmes courant
-    """
+    nbr_charmes_defaut=20
+    nbr_charmes_max = 20
+    nbr_charmes=0
+
     def __init__(self, nom, energie_depart, energie, nbr_charmes):
         """
         Le constructeur du Sorcier. Il doit initialiser le nom, l’énergie de départ, l’énergie courante et

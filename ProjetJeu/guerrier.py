@@ -1,13 +1,10 @@
 class Guerrier(    ):
-    """
-    Classe représentant un Guerrier. Hérite de Personnage.
-    Attributes:
-        force_defaut (int): La valeur par défaut de la force
-        force_max (int): La valeur maximum de la force
-        perte_force_defaut (int): La perte de force lors d'une attaque
-        gain_force_defaut (int): Le gain de force lors d'une resitution d'énergie
-        force (int): La force courante du guerrier
-    """
+    force_defaut = 20
+    force_max = 80
+    perte_force_defaut = 2
+    gain_force_defaut = 10
+    force = 0
+
     def __init__(self, nom, energie_depart, energie, force):
         """
         Le constructeur du Guerrier. Il doit initialiser le nom, l’énergie de départ, l’énergie courante et la force. 
