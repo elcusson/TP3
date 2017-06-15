@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7acd11ab-2d11-4a2a-aa6b-e5fc987aa960" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProjetJeu/sorcier.py" afterPath="$PROJECT_DIR$/ProjetJeu/sorcier.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,11 +25,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="personnage.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="personnage.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ProjetJeu/personnage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="545">
-              <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            <state relative-caret-position="489">
+              <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sorcier.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ProjetJeu/sorcier.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1455">
+              <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -50,11 +61,12 @@
       <list>
         <option value="$PROJECT_DIR$/TP3.py" />
         <option value="$PROJECT_DIR$/ProjetJeu/personnage.py" />
+        <option value="$PROJECT_DIR$/ProjetJeu/sorcier.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="78" />
+    <option name="x" value="44" />
     <option name="y" value="23" />
     <option name="width" value="1350" />
     <option name="height" value="815" />
@@ -387,11 +399,18 @@
       <option name="project" value="LOCAL" />
       <updated>1497568270806</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="changement energie courante">
+      <created>1497568353004</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1497568353004</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="78" y="23" width="1350" height="815" extended-state="0" />
+    <frame x="44" y="23" width="1350" height="815" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26666668" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -520,8 +539,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ProjetJeu/personnage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+        <state relative-caret-position="489">
+          <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProjetJeu/sorcier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1455">
+          <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
           <folding />
         </state>
       </provider>
