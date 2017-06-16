@@ -1,9 +1,12 @@
+#constantes
+
+force_defaut = 20
+force_max = 80
+perte_force_defaut = 2
+gain_force_defaut = 10
+force = 0
+
 class Guerrier(    ):
-    force_defaut = 20
-    force_max = 80
-    perte_force_defaut = 2
-    gain_force_defaut = 10
-    force = 0
 
     def __init__(self, nom, energie_depart, energie, force):
         """

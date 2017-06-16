@@ -1,7 +1,10 @@
+#constantes
+
+nbr_charmes_defaut=20
+nbr_charmes_max = 20
+nbr_charmes=0
+
 class Sorcier( ):
-    nbr_charmes_defaut=20
-    nbr_charmes_max = 20
-    nbr_charmes=0
 
     def __init__(self, nom, energie_depart, energie, nbr_charmes):
         self.nom=nom
