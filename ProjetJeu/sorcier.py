@@ -4,6 +4,8 @@ class Sorcier( ):
     nbr_charmes=0
 
     def __init__(self, nom, energie_depart, energie, nbr_charmes):
+        print(nom, energie_depart, energie, nbr_charmes)
+
         """
         Le constructeur du Sorcier. Il doit initialiser le nom, l’énergie de départ, l’énergie courante et
         le nombre de charmes. NB : pensez à optimiser votre code et utiliser le constructeur de la classe parente.
@@ -22,6 +24,13 @@ class Sorcier( ):
         """
 
     def valider_nbr_charmes(self, nb_charmes):
+        self.nb_charmes = nb_charmes
+
+        if self.nb_charmes < 0 or self.nb_charmes > 20: # NE PAS OUBLIER DE CHANGER LE 20
+            print("False")
+        else:
+            print("True")
+
         """
         Valide que le nombre de charmes est positif (0 inclus) et ne doit pas dépasser nbr_charmes_max. 
         Args:
@@ -59,3 +68,6 @@ class Sorcier( ):
 
         Returns (bool): True si le nombre de charmes est valide et a été modifié, False sinon.
         """
+
+baltazar = Sorcier("Baltazar", 10, 20, 30)
+baltazar.valider_nbr_charmes(5)

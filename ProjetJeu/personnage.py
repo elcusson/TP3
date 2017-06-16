@@ -11,6 +11,10 @@ class Personnage:
     energie_courante = 0
 
     def __init__(self, nom, energie_depart):
+        self.nom = nom
+        self.energie_depart = energie_depart
+        self.energie_courante = energie_depart
+
         """
         Le constructeur du Personnage. Il doit initialiser le nom, l’énergie de départ et l’énergie courante. 
         À la création d’un objet personnage, l’énergie courante égale à l’énergie de départ.
@@ -52,7 +56,7 @@ class Personnage:
 
         energie_courante = float(input("Veuillez insérer l'énergie courante du personnage:"))
 
-        if energie_courante < 0 or if energie_courante > energie_max:
+        if energie_courante < 0 or energie_courante > energie_max:
             return False
         else:
             return True
