@@ -4,11 +4,11 @@ class Sorcier( ):
     nbr_charmes=0
 
     def __init__(self, nom, energie_depart, energie, nbr_charmes):
+        self.nom=nom
+        self.energie_depart = energie_depart
+        self.energie = energie
+        self.nbr_charmes=nbr_charmes
 
-       nom = input("Veuillez donner un nom à votre sorcier")
-       energie_depart = input("Veuillez entrer une énergie de départ pour votre sorcier")
-       energie = input("Veuillez entrer énergie courante du sorcier")
-       nbr_charmes = int(input("Veuillez entrer le nombre de charmes du sorcier"))
 
         """
         Le constructeur du Sorcier. Il doit initialiser le nom, l’énergie de départ, l’énergie courante et
@@ -22,7 +22,7 @@ class Sorcier( ):
 
     def to_string(self):
 
-        print("Le sorcier,",nom ,", à une énergie de ",energie, "et",nbr_charmes,"charmes")
+        return str
 
         """
         Retourne une chaîne du genre "Le sorcier, nom de Personnage, a une énergie de, valeur de l’énergie et,
@@ -31,7 +31,7 @@ class Sorcier( ):
         """
 
     def valider_nbr_charmes(self, nb_charmes):
-
+        self.nbr_charmes = nb_charmes
         if nb_charmes > 0 or nb_charmes < nbr_charmes_max :
             return True
         else:
