@@ -1,14 +1,19 @@
 #constantes
-
+import math
 force_defaut = 20
 force_max = 80
 perte_force_defaut = 2
 gain_force_defaut = 10
 force = 0
 
-class Guerrier(    ):
+class Guerrier(  ):
 
     def __init__(self, nom, energie_depart, energie, force):
+        self.nom = str(nom)
+        self.energie_depart = int(energie_depart)
+        self.energie=int(energie)
+        self.force = int(force)
+
         """
         Le constructeur du Guerrier. Il doit initialiser le nom, l’énergie de départ, l’énergie courante et la force. 
         NB : pensez à optimiser votre code et utiliser le constructeur de la classe parente.
@@ -21,6 +26,7 @@ class Guerrier(    ):
 
 
     def to_string(self):
+        print("Le guerrier,",self.nom, "a une énergie de ",self.energie,"et une force de ",self.force,".")
         """
         Retourne une chaîne du genre : "Le guerrier, nom de Personnage, a une énergie de valeur de 
         l’énergie et une force de valeur de la force."
@@ -30,6 +36,12 @@ class Guerrier(    ):
 
 
     def valider_force(self, force):
+        self.force = force
+        if self.force > 0 or self.force < force_max:
+            return True
+        else:
+            return False
+
         """
         Valide si la force en paramètre est valide (entre 0 et force_max inclusivement).
         Args:
@@ -39,6 +51,7 @@ class Guerrier(    ):
         """
 
     def crier(self):
+        print("Vous allez goûter à la puissance de mon épée!")
         """
         Retourne le cri du guerrier : "Vous allez goûter à la puissance de mon épée!"
         Returns (str): Le cri du guerrier
@@ -46,6 +59,10 @@ class Guerrier(    ):
 
 
     def attaquer(self, force_attaque):
+        if self.energie < int(force_attaque):
+            self.energie = 0
+        else:
+            self.energie = self.energie-int(force_attaque)
         """
         Lorsqu’un guerrier se fait attaquer, son énergie est diminuée de la force de l’attaque.  
         Si la force de l’attaque est plus grande que son énergie, l’énergie du guerrier devient 0 (il meurt).
@@ -57,6 +74,9 @@ class Guerrier(    ):
         """
 
     def reset_energie(self):
+        self.energie = self.energie_depart
+        self.force = min(self.force + gain_force_defaut, force_max)
+
         """
         Permet de remettre l’énergie courante du guerrier à sa valeur de départ (héritage) et 
         augmente sa force (la valeur de force) par la valeur de gain_force_defaut jusqu’à concurrence de 
@@ -64,3 +84,15 @@ class Guerrier(    ):
         """
 
     # setter et getter, a vous de compléter
+##test
+
+Amadeo=Guerrier("Amadeo",2,3,4)    ##Nouveau Guerrier amadeo
+Amadeo.to_string()                 ##Méthode to string
+print(Amadeo.valider_force(4))     ##retourne le booleen
+Amadeo.crier()                     ##Crie du guerrier Amadeo
+Amadeo.attaquer(1)                 #attaque
+print(Amadeo.energie)              ##afficher l'energie d'Amadeo après l'attaque
+Amadeo.reset_energie()             ##reset l'energie du guerrier
+print(Amadeo.energie,Amadeo.force) ##Affiche l'energie et la force après le reset
+
+

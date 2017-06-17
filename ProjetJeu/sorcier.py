@@ -91,7 +91,7 @@ class Sorcier( ):
 
 ##test
 
-louis=Sorcier("Louis",2,3,4) ## assigne des valeurs au sorcier
+louis = Sorcier("Louis",2,3,4) ## assigne des valeurs au sorcier
 louis.attaquer(40)           ##force d'attaque de 40
 print(louis.energie)         ## Energie courant du sorcier après l'attaque
 louis.valider_nbr_charmes(3) ## Valide la valeurs de charmes entrée
