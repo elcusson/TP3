@@ -6,7 +6,7 @@ nbr_charmes=0
 
 class Sorcier( ):
 
-    def __init__(self, nom, energie_depart, energie, nbr_charmes):
+    def __init__(self, nom, energie_depart, energie, nbr_charmes): # tester
         self.nom= str(nom)
         self.energie_depart = int(energie_depart)
         self.energie = int(energie)
@@ -22,8 +22,8 @@ class Sorcier( ):
             nbr_charmes:  Le nombre de charmes du sorcier
         """
 
-    def to_string(self):
-        print("Le soricer ,",self.nom,", a une énergie de ",self.energie,"et ",self.nbr_charmes," charmes." )
+    def to_string(self): # tester
+        print("Le sorcier ,",self.nom,", a une énergie de ",self.energie,"et ",self.nbr_charmes," charmes." )
 
         """
         Retourne une chaîne du genre "Le sorcier, nom de Personnage, a une énergie de, valeur de l’énergie et,
@@ -31,7 +31,7 @@ class Sorcier( ):
         Returns (str): La chaîne représentant le Sorcier.
         """
 
-    def valider_nbr_charmes(self, nbr_charmes):
+    def valider_nbr_charmes(self, nbr_charmes): # tester
         self.nbr_charmes = int(nbr_charmes)
         if self.nbr_charmes > 0 or self.nbr_charmes < nbr_charmes_max:
             print("True")
@@ -46,7 +46,7 @@ class Sorcier( ):
         Returns (bool): True si le nombre de charmes est valide, false sinon.
         """
 
-    def crier(self):
+    def crier(self): # tester
         print("Je vais tous vous anéantir!")
 
         """
@@ -54,7 +54,7 @@ class Sorcier( ):
         Returns: Le cri du sorcier
         """
 
-    def attaquer(self, force_attaque):
+    def attaquer(self, force_attaque): # tester
         if self.energie < force_attaque:
             self.energie = 0
         else:
@@ -66,8 +66,8 @@ class Sorcier( ):
             force_attaque (int): La force de l'attaque 
         """
 
-    def get_nbr_charmes(self):
-        print(int(nbr_charmes))
+    def get_nbr_charmes(self): # tester
+        print(self.nbr_charmes)
         """
         Retourne le nombre de charmes du sorcier.
         Returns (int): Le nombre de charmes du sorcier.
@@ -76,10 +76,10 @@ class Sorcier( ):
 
     def set_nbr_charmes(self, nbr_charmes):
         self.nbr_charmes = int(nbr_charmes)
-        if self.nbr_charmes > 0 or self.nbr_charmes_charmes > nbr_charmes_max:
-            return True
+        if self.nbr_charmes > 0 and self.nbr_charmes < nbr_charmes_max:
+            print("True")
         else:
-            return False
+            print("False")
 
         """
         Assigne le nombre de charmes du sorcier. Le nombre de charmes doit être valide.
@@ -96,4 +96,6 @@ louis.attaquer(40)           ##force d'attaque de 40
 print(louis.energie)         ## Energie courant du sorcier après l'attaque
 louis.valider_nbr_charmes(3) ## Valide la valeurs de charmes entrée
 louis.crier()                ## affiche le crie du sorcier
+louis.set_nbr_charmes(-21)   ## nouveau nombre de charmes
+louis.get_nbr_charmes()      ## affiche le nombre de charmes
 louis.to_string()            ##Valide la chaine de caratère
