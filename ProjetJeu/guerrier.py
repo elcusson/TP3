@@ -6,9 +6,10 @@ perte_force_defaut = 2
 gain_force_defaut = 10
 force = 0
 
-class Guerrier(  ):
 
-    def __init__(self, nom, energie_depart, energie, force):
+class Guerrier():
+
+    def __init__(self, nom, energie_depart, energie, force): # tester
         self.nom = str(nom)
         self.energie_depart = int(energie_depart)
         self.energie=int(energie)
@@ -25,8 +26,8 @@ class Guerrier(  ):
         """
 
 
-    def to_string(self):
-        print("Le guerrier,",self.nom, "a une énergie de ",self.energie,"et une force de ",self.force,".")
+    def to_string(self): # tester
+        print("Le guerrier, ",self.nom, ", a une énergie de ",self.energie," et une force de ",self.force,".", sep="")
         """
         Retourne une chaîne du genre : "Le guerrier, nom de Personnage, a une énergie de valeur de 
         l’énergie et une force de valeur de la force."
@@ -35,12 +36,12 @@ class Guerrier(  ):
         """
 
 
-    def valider_force(self, force):
+    def valider_force(self, force): # tester
         self.force = force
-        if self.force > 0 or self.force < force_max:
-            return True
+        if self.force > 0 and self.force < force_max:
+            print("True")
         else:
-            return False
+            print("False")
 
         """
         Valide si la force en paramètre est valide (entre 0 et force_max inclusivement).
@@ -50,7 +51,7 @@ class Guerrier(  ):
         Returns (bool): True si la force est valide, False sinon
         """
 
-    def crier(self):
+    def crier(self): # tester
         print("Vous allez goûter à la puissance de mon épée!")
         """
         Retourne le cri du guerrier : "Vous allez goûter à la puissance de mon épée!"
@@ -58,11 +59,13 @@ class Guerrier(  ):
         """
 
 
-    def attaquer(self, force_attaque):
+    def attaquer(self, force_attaque): # tester
         if self.energie < int(force_attaque):
             self.energie = 0
+            self.force = 0
         else:
             self.energie = self.energie-int(force_attaque)
+            self.force = max(self.force - perte_force_defaut, 0)
         """
         Lorsqu’un guerrier se fait attaquer, son énergie est diminuée de la force de l’attaque.  
         Si la force de l’attaque est plus grande que son énergie, l’énergie du guerrier devient 0 (il meurt).
@@ -73,7 +76,7 @@ class Guerrier(  ):
             force_attaque (int): La force de l'attaque 
         """
 
-    def reset_energie(self):
+    def reset_energie(self): # tester
         self.energie = self.energie_depart
         self.force = min(self.force + gain_force_defaut, force_max)
 
@@ -86,13 +89,13 @@ class Guerrier(  ):
     # setter et getter, a vous de compléter
 ##test
 
-Amadeo=Guerrier("Amadeo",2,3,4)    ##Nouveau Guerrier amadeo
-Amadeo.to_string()                 ##Méthode to string
-print(Amadeo.valider_force(4))     ##retourne le booleen
-Amadeo.crier()                     ##Crie du guerrier Amadeo
-Amadeo.attaquer(1)                 #attaque
-print(Amadeo.energie)              ##afficher l'energie d'Amadeo après l'attaque
-Amadeo.reset_energie()             ##reset l'energie du guerrier
-print(Amadeo.energie,Amadeo.force) ##Affiche l'energie et la force après le reset
+Amadeo=Guerrier("Amadeo", 2, 3, force_defaut)       ## Nouveau Guerrier amadeo
+Amadeo.to_string()                                  ## Méthode to string
+Amadeo.valider_force(4)                             ## retourne le booleen
+Amadeo.crier()                                      ## Crie du guerrier Amadeo
+Amadeo.attaquer(1)                                  ## attaque
+print(Amadeo.energie)                               ## afficher l'energie d'Amadeo après l'attaque
+Amadeo.reset_energie()                              ## reset l'energie du guerrier
+print(Amadeo.energie,Amadeo.force)                  ## Affiche l'energie et la force après le reset
 
 

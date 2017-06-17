@@ -9,6 +9,7 @@ nom= ""
 energie_depart = 0
 energie_courante = 0
 
+
 class Personnage:
 
     def __init__(self, nom, energie_depart): # tester
