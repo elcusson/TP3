@@ -9,7 +9,7 @@ force = 0
 
 class Guerrier():
 
-    def __init__(self, nom, energie_depart, energie, force): # tester
+    def __init__(self, nom, energie_depart, energie, force = force_defaut): # tester
         self.nom = str(nom)
         self.energie_depart = int(energie_depart)
         self.energie=int(energie)
@@ -89,7 +89,7 @@ class Guerrier():
     # setter et getter, a vous de compléter
 ##test
 
-Amadeo=Guerrier("Amadeo", 2, 3, force_defaut)       ## Nouveau Guerrier amadeo
+Amadeo=Guerrier("Amadeo", 2, 3)                     ## Nouveau Guerrier amadeo
 Amadeo.to_string()                                  ## Méthode to string
 Amadeo.valider_force(4)                             ## retourne le booleen
 Amadeo.crier()                                      ## Crie du guerrier Amadeo

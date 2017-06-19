@@ -12,7 +12,7 @@ energie_courante = 0
 
 class Personnage:
 
-    def __init__(self, nom, energie_depart): # tester
+    def __init__(self, nom = nom, energie_depart = energie_depart_defaut): # constructeur tester
         self.nom = str(nom)
         self.energie_depart = int(energie_depart)
 
@@ -152,7 +152,7 @@ class Personnage:
 
     # compléter la méthode manquante
 
-tony = Personnage(nom, energie_depart_defaut)               # J'insère les valeurs de départ
+tony = Personnage()               # J'insère les valeurs de départ
 tony.valider_nom("Anthony Gagnon")                          # Je donne un nom
 tony.valider_energie_depart(5)                              # Je valide une valeur pour l'énergie au départ
 tony.valider_energie_courante(20)                           # Je valide une valeur pour l'énergie au cours du programme

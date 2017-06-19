@@ -1,13 +1,13 @@
 #constantes
 
-nbr_charmes_defaut=20
+nbr_charmes_defaut = 20
 nbr_charmes_max = 20
-nbr_charmes=0
+nbr_charmes = 0
 
 
 class Sorcier( ):
 
-    def __init__(self, nom, energie_depart, energie, nbr_charmes): # tester
+    def __init__(self, nom, energie_depart, energie, nbr_charmes = nbr_charmes_defaut): # tester
         self.nom= str(nom)
         self.energie_depart = int(energie_depart)
         self.energie = int(energie)
@@ -92,7 +92,7 @@ class Sorcier( ):
 
 ##test
 
-louis = Sorcier("Louis",2,3,4) ## assigne des valeurs au sorcier
+louis = Sorcier("Louis",2,3) ## assigne des valeurs au sorcier
 louis.attaquer(40)           ##force d'attaque de 40
 print(louis.energie)         ## Energie courant du sorcier après l'attaque
 louis.valider_nbr_charmes(3) ## Valide la valeurs de charmes entrée
