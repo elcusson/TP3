@@ -92,11 +92,12 @@ class Sorcier( ):
 
 ##test
 
-louis = Sorcier("Louis",2,3) ## assigne des valeurs au sorcier
-louis.attaquer(40)           ##force d'attaque de 40
-print(louis.energie)         ## Energie courant du sorcier après l'attaque
-louis.valider_nbr_charmes(3) ## Valide la valeurs de charmes entrée
-louis.crier()                ## affiche le crie du sorcier
-louis.set_nbr_charmes(-21)   ## nouveau nombre de charmes
-louis.get_nbr_charmes()      ## affiche le nombre de charmes
-louis.to_string()            ##Valide la chaine de caratère
+if __name__ == "__main__":
+    louis = Sorcier("Louis",2,3) ## assigne des valeurs au sorcier
+    louis.attaquer(40)           ##force d'attaque de 40
+    print(louis.energie)         ## Energie courant du sorcier après l'attaque
+    louis.valider_nbr_charmes(3) ## Valide la valeurs de charmes entrée
+    louis.crier()                ## affiche le crie du sorcier
+    louis.set_nbr_charmes(-21)   ## nouveau nombre de charmes
+    louis.get_nbr_charmes()      ## affiche le nombre de charmes
+    louis.to_string()            ##Valide la chaine de caratère

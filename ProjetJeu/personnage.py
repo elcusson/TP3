@@ -152,17 +152,18 @@ class Personnage:
 
     # compléter la méthode manquante
 
-tony = Personnage()               # J'insère les valeurs de départ
-tony.valider_nom("Anthony Gagnon")                          # Je donne un nom
-tony.valider_energie_depart(5)                              # Je valide une valeur pour l'énergie au départ
-tony.valider_energie_courante(20)                           # Je valide une valeur pour l'énergie au cours du programme
-tony.est_mort()                                             # Je vérifie si le personnage est mort
-tony.set_energie_courante(-1)                               # Je donne une nouvelle valeur d'énergie négative
-tony.est_mort()                                             # Je suis maintenant mort
-tony.get_nom()                                              # Je print le nom
-tony.set_nom("Tony Malone")                                 # Je set un nouveau nom
-tony.get_nom()                                              # Je print le nouveau nom
-tony.get_energie_depart()                                   # Je print l'énergie de départ
-tony.set_energie_depart(10)                                 # J'insère une nouvelle valeur pour l'énergie de départ
-tony.reset_energie()                                        # Je remets l'énergie à sa valeur de départ
-tony.get_energie_courante()                                 # Je print l'énergie courante
+if __name__ == "__main__":
+    tony = Personnage()                                         # J'insère les valeurs de départ
+    tony.valider_nom("Anthony Gagnon")                          # Je donne un nom
+    tony.valider_energie_depart(5)                              # Je valide une valeur pour l'énergie au départ
+    tony.valider_energie_courante(20)                           # Je valide une valeur pour l'énergie au cours du programme
+    tony.est_mort()                                             # Je vérifie si le personnage est mort
+    tony.set_energie_courante(-1)                               # Je donne une nouvelle valeur d'énergie négative
+    tony.est_mort()                                             # Je suis maintenant mort
+    tony.get_nom()                                              # Je print le nom
+    tony.set_nom("Tony Malone")                                 # Je set un nouveau nom
+    tony.get_nom()                                              # Je print le nouveau nom
+    tony.get_energie_depart()                                   # Je print l'énergie de départ
+    tony.set_energie_depart(10)                                 # J'insère une nouvelle valeur pour l'énergie de départ
+    tony.reset_energie()                                        # Je remets l'énergie à sa valeur de départ
+    tony.get_energie_courante()                                 # Je print l'énergie courante
