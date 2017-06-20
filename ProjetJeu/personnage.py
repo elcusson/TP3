@@ -154,6 +154,17 @@ class Personnage:
 
 if __name__ == "__main__":
     tony = Personnage()                                         # J'insère les valeurs de départ
+
+############## VOILÀ UN TEST UNITAIRE (VOIR TD 13 JUIN 2017)
+    assert tony.nom == ""
+
+    tony.set_nom("Anthony Gagnon")                              # Je set un nom
+
+    assert tony.nom == "Anthony Gagnon"
+
+############# FIN DU TEST UNITAIRE
+
+
     tony.valider_nom("Anthony Gagnon")                          # Je donne un nom
     tony.valider_energie_depart(5)                              # Je valide une valeur pour l'énergie au départ
     tony.valider_energie_courante(20)                           # Je valide une valeur pour l'énergie au cours du programme
