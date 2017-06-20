@@ -34,7 +34,7 @@ class Sorcier( ):
 
     def valider_nbr_charmes(self, nbr_charmes): # tester
         self.nbr_charmes = int(nbr_charmes)
-        if self.nbr_charmes > 0 or self.nbr_charmes < nbr_charmes_max:
+        if self.nbr_charmes > 0 and self.nbr_charmes < nbr_charmes_max:
             print("True")
         else:
             print("False")

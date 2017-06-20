@@ -27,7 +27,7 @@ class Guerrier():
 
 
     def to_string(self): # tester
-        print("Le guerrier, ",self.nom, ", a une énergie de ",self.energie," et une force de ",self.force,".", sep="")
+        print("Le guerrier, ", self.nom, ", a une énergie de ", self.energie, " et une force de ", self.force, ".", sep="")
         """
         Retourne une chaîne du genre : "Le guerrier, nom de Personnage, a une énergie de valeur de 
         l’énergie et une force de valeur de la force."
@@ -64,7 +64,7 @@ class Guerrier():
             self.energie = 0
             self.force = 0
         else:
-            self.energie = self.energie-int(force_attaque)
+            self.energie = self.energie - int(force_attaque)
             self.force = max(self.force - perte_force_defaut, 0)
         """
         Lorsqu’un guerrier se fait attaquer, son énergie est diminuée de la force de l’attaque.  

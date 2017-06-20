@@ -25,6 +25,7 @@ class Personnage:
         """
 
     def crier(self):
+
         """
         Méthode abstraite (sans code) utile pour l’héritage, cela forcera la classe dérivée à surcharger 
         la méthode (polymorphisme).
@@ -55,6 +56,15 @@ class Personnage:
         else:
             print("True")
 
+        """
+        Valide le nom du personnage. Un nom de personnage est valide lorsqu’il a la bonne longueur 
+        (entre min et max) bornes incluses.
+        Args:
+            nom (str): Le nom à valider
+
+        Returns (bool): True si le nom est valide, False sinon.
+        """
+
 
     def valider_energie_courante(self, energie_courante): # tester
         self.energie_courante = int(energie_courante)
@@ -62,6 +72,14 @@ class Personnage:
             print("False")
         else:
             print("True")
+
+        """
+        Valide l'énergie courante. Elle doit être positive (0 inclus) et ne doit pas dépasser energie_max.
+        Args:
+            energie_courante (int): L'énergie à valider.
+
+        Returns (bool): True si l'énergie est valide, False sinon.
+        """
 
     def valider_energie_depart(self, energie_depart): # tester
         self.energie_depart = int(energie_depart)
@@ -160,7 +178,7 @@ if __name__ == "__main__":
 
     tony.set_nom("Anthony Gagnon")                              # Je set un nom
 
-    assert tony.nom == "Anthony Gagnon"
+    assert tony.nom == "Anthony Gagnon"                         # Je vérifie si la variable fonctionne bien
 
 ############# FIN DU TEST UNITAIRE
 
