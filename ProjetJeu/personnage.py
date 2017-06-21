@@ -1,3 +1,4 @@
+### Louis Cusson 111 142 104
 #constantes
 
 energie_depart_defaut = 20
