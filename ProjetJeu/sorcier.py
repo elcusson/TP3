@@ -1,3 +1,5 @@
+### Louis Cusson 111 142 104
+
 #constantes
 
 nbr_charmes_defaut = 20
@@ -91,12 +93,29 @@ class Sorcier( ):
 
 ##test
 
+## test unitaire ##
 if __name__ == "__main__":
-    louis = Sorcier("Louis",2,3) ## assigne des valeurs au sorcier
-    louis.attaquer(40)           ##force d'attaque de 40
-    print(louis.energie)         ## Energie courant du sorcier après l'attaque
-    louis.valider_nbr_charmes(3) ## Valide la valeurs de charmes entrée
-    louis.crier()                ## affiche le crie du sorcier
-    louis.set_nbr_charmes(-21)   ## nouveau nombre de charmes
-    louis.get_nbr_charmes()      ## affiche le nombre de charmes
-    louis.to_string()            ##Valide la chaine de caratère
+
+    louis = Sorcier("louis",2,3,4) #test unitaire pour la classe sorcier
+
+assert louis.nom =="louis"  ##test si la saisie du nom est bien "louis"
+
+assert louis.nbr_charmes == 4 #test si la saisie du nombre de charme est bien 4
+
+assert louis.energie == 3
+
+assert louis.energie_depart == 2
+
+louis.set_nbr_charmes(2)
+
+assert louis.nbr_charmes == 2
+
+louis.nbr_charmes=20
+louis = Sorcier("Louis",2,3) ## assigne des valeurs au sorcier
+louis.attaquer(40)           ##force d'attaque de 40
+print(louis.energie)         ## Energie courant du sorcier après l'attaque
+louis.valider_nbr_charmes(3) ## Valide la valeurs de charmes entrée
+louis.crier()                ## affiche le crie du sorcier
+louis.set_nbr_charmes(-21)   ## nouveau nombre de charmes
+louis.get_nbr_charmes()      ## affiche le nombre de charmes
+louis.to_string()            ##Valide la chaine de caratère
