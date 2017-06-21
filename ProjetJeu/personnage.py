@@ -37,7 +37,7 @@ class Personnage:
         la méthode (polymorphisme).
         """
 
-    def est_mort(self): # tester
+    def est_mort(self): #
         if self.energie_courante <= 0:
             return True
         else:
@@ -49,7 +49,7 @@ class Personnage:
         """
 
 
-    def valider_nom(self, nom): # tester
+    def valider_nom(self, nom): #
         if len(str(nom)) < longueur_nom_min or len(str(nom)) > longueur_nom_max:
             return False
         else:
@@ -65,7 +65,7 @@ class Personnage:
         """
 
 
-    def valider_energie_courante(self, energie_courante): # tester
+    def valider_energie_courante(self, energie_courante): #
         if int(energie_courante) < 0 or int(energie_courante) > energie_max:
             return False
         else:
@@ -79,7 +79,7 @@ class Personnage:
         Returns (bool): True si l'énergie est valide, False sinon.
         """
 
-    def valider_energie_depart(self, energie_depart): # tester
+    def valider_energie_depart(self, energie_depart): #
         if int(energie_depart) < energie_depart_min or int(energie_depart) > energie_max:
             return False
         else:
@@ -94,14 +94,14 @@ class Personnage:
         Returns (bool): True si l'énergie de départ est valide, False sinon.
         """
 
-    def reset_energie(self): # tester
+    def reset_energie(self): #
         self.energie_courante = self.energie_depart
         """
         Remet l’énergie courante du personnage à sa valeur de départ.
         """
 
 
-    def get_energie_courante(self): # tester
+    def get_energie_courante(self): #
         print(self.energie_courante)
         """
         Retourne l'énergie courante
@@ -126,7 +126,7 @@ class Personnage:
         """
 
 
-    def get_nom(self): # tester
+    def get_nom(self): #
         print(self.nom)
 
         """
@@ -151,7 +151,7 @@ class Personnage:
         """
 
 
-    def get_energie_depart(self): # tester
+    def get_energie_depart(self): #
         print(self.energie_depart)
 
         """
@@ -178,28 +178,27 @@ class Personnage:
     # compléter la méthode manquante
 
 if __name__ == "__main__":
+
+    # méthode __init__
     tony = Personnage()                                         # J'insère les valeurs de départ
+    assert tony.nom == ""                                       # Je vérifie si les variables de mon objet correspondent aux valeurs initiales
+    assert tony.energie_depart == energie_depart_defaut
 
-############## VOILÀ UN TEST UNITAIRE (VOIR TD 13 JUIN 2017)
-    assert tony.nom == ""
-
+    # méthode set_nom
     tony.set_nom("Anthony Gagnon")                              # Je set un nom
-
     assert tony.nom == "Anthony Gagnon"                         # Je vérifie si la variable fonctionne bien
+    tony.set_nom("Mo")
+    assert tony.nom == "Anthony Gagnon"
 
-############# FIN DU TEST UNITAIRE
+    # méthode set_énergie_depart
+    tony.set_energie_depart(89)
+    assert tony.energie_depart == 89
+    tony.set_energie_depart(-4)
+    assert tony.energie_depart == 89
 
+    # méthode set_énergie_courant
+    tony.set_energie_courante(89-9)
+    assert tony.energie_courante == 80
+    tony.set_energie_courante(9999)
+    assert tony.energie_courante == 80
 
-    tony.valider_nom("Anthony Gagnon")                          # Je donne un nom
-    tony.valider_energie_depart(5)                              # Je valide une valeur pour l'énergie au départ
-    tony.valider_energie_courante(20)                           # Je valide une valeur pour l'énergie au cours du programme
-    tony.est_mort()                                             # Je vérifie si le personnage est mort
-    tony.set_energie_courante(-1)                               # Je donne une nouvelle valeur d'énergie négative
-    tony.est_mort()                                             # Je suis maintenant mort
-    tony.get_nom()                                              # Je print le nom
-    tony.set_nom("Tony Malone")                                 # Je set un nouveau nom
-    tony.get_nom()                                              # Je print le nouveau nom
-    tony.get_energie_depart()                                   # Je print l'énergie de départ
-    tony.set_energie_depart(10)                                 # J'insère une nouvelle valeur pour l'énergie de départ
-    tony.reset_energie()                                        # Je remets l'énergie à sa valeur de départ
-    tony.get_energie_courante()                                 # Je print l'énergie courante
