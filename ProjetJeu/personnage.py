@@ -12,7 +12,7 @@ energie_courante = 0
 
 class Personnage:
 
-    def __init__(self, nom = nom, energie_depart = energie_depart_defaut): # constructeur tester
+    def __init__(self, nom=nom, energie_depart=energie_depart_defaut): # constructeur tester
         self.nom = str(nom)
         self.energie_depart = int(energie_depart)
 
@@ -39,9 +39,9 @@ class Personnage:
 
     def est_mort(self): # tester
         if self.energie_courante <= 0:
-            print("True")
+            return True
         else:
-            print("False")
+            return False
 
         """
         Retourne vrai lorsque l’énergie du personnage est à 0.
@@ -50,11 +50,10 @@ class Personnage:
 
 
     def valider_nom(self, nom): # tester
-        self.nom = str(nom)
-        if len(self.nom) < longueur_nom_min or len(self.nom) > longueur_nom_max:
-            print("False")
+        if len(str(nom)) < longueur_nom_min or len(str(nom)) > longueur_nom_max:
+            return False
         else:
-            print("True")
+            return True
 
         """
         Valide le nom du personnage. Un nom de personnage est valide lorsqu’il a la bonne longueur 
@@ -67,11 +66,10 @@ class Personnage:
 
 
     def valider_energie_courante(self, energie_courante): # tester
-        self.energie_courante = int(energie_courante)
-        if energie_courante < 0 or energie_courante > energie_max:
-            print("False")
+        if int(energie_courante) < 0 or int(energie_courante) > energie_max:
+            return False
         else:
-            print("True")
+            return True
 
         """
         Valide l'énergie courante. Elle doit être positive (0 inclus) et ne doit pas dépasser energie_max.
@@ -82,11 +80,10 @@ class Personnage:
         """
 
     def valider_energie_depart(self, energie_depart): # tester
-        self.energie_depart = int(energie_depart)
-        if self.energie_depart < energie_depart_min or self.energie_depart > energie_max:
-            print("False")
+        if int(energie_depart) < energie_depart_min or int(energie_depart) > energie_max:
+            return False
         else:
-            print("True")
+            return True
 
         """
         Valide l'énergie de départ. Elle est valide lorsqu’elle est entre energie_depart_min et 
@@ -113,8 +110,11 @@ class Personnage:
 
 
     def set_energie_courante(self, energie_courante): # tester
-        self.energie_courante = int(energie_courante)
-        print("True ou False...")
+        if self.valider_energie_courante(int(energie_courante)) == True:
+            self.energie_courante = int(energie_courante)
+            return True
+        else:
+            return False
 
 
         """
@@ -136,8 +136,11 @@ class Personnage:
 
 
     def set_nom(self, nom): # tester
-        self.nom = str(nom)
-        print("True ou False...")
+        if self.valider_nom(str(nom)) == True:
+            self.nom = str(nom)
+            return True
+        else:
+            return False
 
         """
         Assigne le nom s'il est valide. 
@@ -158,8 +161,12 @@ class Personnage:
 
 
     def set_energie_depart(self, energie_depart): # tester
-        self.energie_depart = int(energie_depart)
-        print("True ou False...")
+        if self.valider_energie_depart(int(energie_depart)) == True:
+            self.energie_depart = int(energie_depart)
+            return True
+        else:
+            return False
+
         """
         Assigne l'énergie de départ si elle est valide. 
         Args:

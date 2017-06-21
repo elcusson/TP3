@@ -7,11 +7,11 @@ nbr_charmes = 0
 
 class Sorcier( ):
 
-    def __init__(self, nom, energie_depart, energie, nbr_charmes = nbr_charmes_defaut): # tester
-        self.nom= str(nom)
+    def __init__(self, nom, energie_depart, energie, nbr_charmes=nbr_charmes_defaut): # tester
+        self.nom = str(nom)
         self.energie_depart = int(energie_depart)
         self.energie = int(energie)
-        self.nbr_charmes=int(nbr_charmes)
+        self.nbr_charmes = int(nbr_charmes)
 
         """
         Le constructeur du Sorcier. Il doit initialiser le nom, l’énergie de départ, l’énergie courante et
@@ -24,7 +24,7 @@ class Sorcier( ):
         """
 
     def to_string(self): # tester
-        print("Le sorcier ,",self.nom,", a une énergie de ",self.energie,"et ",self.nbr_charmes," charmes." )
+        print("Le sorcier ,",self.nom,", a une énergie de ",self.energie,"et ",self.nbr_charmes," charmes.")
 
         """
         Retourne une chaîne du genre "Le sorcier, nom de Personnage, a une énergie de, valeur de l’énergie et,
@@ -33,11 +33,10 @@ class Sorcier( ):
         """
 
     def valider_nbr_charmes(self, nbr_charmes): # tester
-        self.nbr_charmes = int(nbr_charmes)
-        if self.nbr_charmes > 0 and self.nbr_charmes < nbr_charmes_max:
-            print("True")
+        if int(nbr_charmes) > 0 and int(nbr_charmes) < nbr_charmes_max:
+            return True
         else:
-            print("False")
+            return False
 
         """
         Valide que le nombre de charmes est positif (0 inclus) et ne doit pas dépasser nbr_charmes_max. 
@@ -56,10 +55,10 @@ class Sorcier( ):
         """
 
     def attaquer(self, force_attaque): # tester
-        if self.energie < force_attaque:
+        if self.energie < int(force_attaque):
             self.energie = 0
         else:
-            self.energie = self.energie-force_attaque
+            self.energie -= force_attaque
         """
         Lorsqu’un sorcier se fait attaquer son énergie est diminuée de la force de l’attaque. Si la force de l’attaque est
         plus grande que son énergie, l’énergie du sorcier devient 0 (il meurt). 
@@ -76,11 +75,11 @@ class Sorcier( ):
         """
 
     def set_nbr_charmes(self, nbr_charmes):
-        self.nbr_charmes = int(nbr_charmes)
-        if self.nbr_charmes > 0 and self.nbr_charmes < nbr_charmes_max:
-            print("True")
+        if self.valider_nbr_charmes(int(nbr_charmes)) == True:
+            self.nbr_charmes = int(nbr_charmes)
+            return True
         else:
-            print("False")
+            return False
 
         """
         Assigne le nombre de charmes du sorcier. Le nombre de charmes doit être valide.

@@ -37,11 +37,10 @@ class Guerrier():
 
 
     def valider_force(self, force): # tester
-        self.force = force
-        if self.force > 0 and self.force < force_max:
-            print("True")
+        if int(force) > 0 and int(force) < force_max:
+            return True
         else:
-            print("False")
+            return False
 
         """
         Valide si la force en paramètre est valide (entre 0 et force_max inclusivement).
@@ -64,7 +63,7 @@ class Guerrier():
             self.energie = 0
             self.force = 0
         else:
-            self.energie = self.energie - int(force_attaque)
+            self.energie -= int(force_attaque)
             self.force = max(self.force - perte_force_defaut, 0)
         """
         Lorsqu’un guerrier se fait attaquer, son énergie est diminuée de la force de l’attaque.  
@@ -87,6 +86,7 @@ class Guerrier():
         """
 
     # setter et getter, a vous de compléter
+
 ##test
 if __name__ == "__main__":
     Amadeo=Guerrier("Amadeo", 2, 3)                     ## Nouveau Guerrier amadeo
