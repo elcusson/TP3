@@ -201,4 +201,3 @@ if __name__ == "__main__":
     assert tony.energie_courante == 80
     tony.set_energie_courante(9999)
     assert tony.energie_courante == 80
-
