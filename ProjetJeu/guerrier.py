@@ -40,7 +40,7 @@ class Guerrier():
 
 
     def valider_force(self, force): # tester
-        if int(force) > 0 and int(force) < force_max:
+        if int(force) > 0 and int(force) <= force_max:
             return True
         else:
             return False
@@ -101,6 +101,13 @@ if __name__ == "__main__":
     assert baltazar.energie_depart == 40 #test si l'énergie de depart est de 40
     assert baltazar.energie == 20 #test si l'énergie est de 20
     assert baltazar.force == 30 #test la force du guerrier
+
+    #méthode valider force
+    baltazar.valider_force(30)
+    assert baltazar.force ==30
+    baltazar.valider_force(90)
+    assert baltazar.force == 30
+
 
     #méthode attaquer
 
