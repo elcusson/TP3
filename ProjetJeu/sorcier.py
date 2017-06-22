@@ -97,13 +97,13 @@ class Sorcier( ):
 if __name__ == "__main__":
 
     ##méthode __init___
-    louis = Sorcier("louis",2,3,4) #test unitaire pour la classe sorcier
-    assert louis.nom =="louis"  ##test si la saisie du nom est bien "louis"
-    assert louis.nbr_charmes == 4 #test si la saisie du nombre de charme est bien 4
-    assert louis.energie == 3 ## test si la saisie de la valeur de l'energie est de 3
-     assert louis.energie_depart == 2 ## test si l'energie de départ du sorcier est de 2
-    louis.set_nbr_charmes(2)  ## on assigne un nombre de charme au sorcier
-    assert louis.nbr_charmes == 2 ## on test si la valeur du nombre de charmes est celle qu'on lui a assignée
-    louis.attaquer(6) ## on test la fonction attaquer
-    assert louis.energie == 0 ## test si la valeur de l'énergie du sorcier apres l'attaque
+    louis = Sorcier("louis",2,3,4)          #test unitaire pour la classe sorcier
+    assert louis.nom =="louis"              ##test si la saisie du nom est bien "louis"
+    assert louis.nbr_charmes == 4           #test si la saisie du nombre de charme est bien 4
+    assert louis.energie == 3               ## test si la saisie de la valeur de l'energie est de 3
+    assert louis.energie_depart == 2        ## test si l'energie de départ du sorcier est de 2
+    louis.set_nbr_charmes(2)                ## on assigne un nombre de charme au sorcier
+    assert louis.nbr_charmes == 2           ## on test si la valeur du nombre de charmes est celle qu'on lui a assignée
+    louis.attaquer(6)                       ## on test la fonction attaquer
+    assert louis.energie == 0               ## test si la valeur de l'énergie du sorcier apres l'attaque
 
