@@ -176,7 +176,15 @@ class Personnage:
         Returns (bool): True si l'assignation a réussi, False sinon.
         """
 
-    # compléter la méthode manquante
+    # compléter la méthode manquante to_string
+    def to_string(self):
+        return "Le personnage, " + str(self.nom) + ", a une énergie de " + str(self.energie_courante) + "."
+        """
+        Retourne une chaîne du genre : "Le personnage, nom de Personnage, a une énergie de valeur de 
+        l’énergie."
+
+        Returns (str): La chaîne représentant le guerrier. 
+        """
 
 if __name__ == "__main__":
 
@@ -198,10 +206,10 @@ if __name__ == "__main__":
     assert tony.energie_depart == 89
 
     # méthode set_énergie_courante
-    tony.set_energie_courante(89-9)
-    assert tony.energie_courante == 80
+    tony.set_energie_courante(60)
+    assert tony.energie_courante == 60
     tony.set_energie_courante(9999)
-    assert tony.energie_courante == 80
+    assert tony.energie_courante == 60
 
     # méthode est_mort
     tony.energie_courante = -3
@@ -209,4 +217,7 @@ if __name__ == "__main__":
 
     # méthode reset_energie
     tony.reset_energie()
-    assert energie_courante == energie_depart
+    assert tony.energie_courante == 89
+
+    # méthode to_string
+    assert tony.to_string() == "Le personnage, " + "Anthony Gagnon" + ", a une énergie de " + "89" + "."
