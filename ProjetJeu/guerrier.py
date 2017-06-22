@@ -30,7 +30,7 @@ class Guerrier():
 
 
     def to_string(self): # tester
-        print("Le guerrier, ", self.nom, ", a une énergie de ", self.energie, " et une force de ", self.force, ".", sep="")
+        return "Le guerrier, "+ str(self.nom) + ", a une énergie de " + str(self.energie) + " et une force de " + str(self.force) + "."
         """
         Retourne une chaîne du genre : "Le guerrier, nom de Personnage, a une énergie de valeur de 
         l’énergie et une force de valeur de la force."
@@ -54,7 +54,7 @@ class Guerrier():
         """
 
     def crier(self): # tester
-        print("Vous allez goûter à la puissance de mon épée!")
+        return "Vous allez goûter à la puissance de mon épée!"
         """
         Retourne le cri du guerrier : "Vous allez goûter à la puissance de mon épée!"
         Returns (str): Le cri du guerrier
@@ -101,6 +101,13 @@ if __name__ == "__main__":
     assert baltazar.energie_depart == 40 #test si l'énergie de depart est de 40
     assert baltazar.energie == 20 #test si l'énergie est de 20
     assert baltazar.force == 30 #test la force du guerrier
+
+    ##méthode to string
+    assert baltazar.to_string() == "Le guerrier, "+ "baltazar" + ", a une énergie de " + "20" + " et une force de " + "30" + "."
+
+    ##Méthode crier
+
+    baltazar.crier() == "Vous allez goûter à la puissance de mon épée!"
 
     #méthode valider force
     baltazar.valider_force(30)
