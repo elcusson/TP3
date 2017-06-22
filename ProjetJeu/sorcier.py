@@ -26,7 +26,7 @@ class Sorcier( ):
         """
 
     def to_string(self): # tester
-        print("Le sorcier ,",self.nom,", a une énergie de ",self.energie,"et ",self.nbr_charmes," charmes.")
+        return "Le sorcier, " + str(self.nom) + ", a une énergie de " + str(self.energie) + " et " + str(self.nbr_charmes) + " charmes."
 
         """
         Retourne une chaîne du genre "Le sorcier, nom de Personnage, a une énergie de, valeur de l’énergie et,
@@ -91,8 +91,6 @@ class Sorcier( ):
         Returns (bool): True si le nombre de charmes est valide et a été modifié, False sinon.
         """
 
-##test
-
 ## Test Unitaire ##
 if __name__ == "__main__":
 
@@ -106,4 +104,5 @@ if __name__ == "__main__":
     assert louis.nbr_charmes == 2           ## on test si la valeur du nombre de charmes est celle qu'on lui a assignée
     louis.attaquer(6)                       ## on test la fonction attaquer
     assert louis.energie == 0               ## test si la valeur de l'énergie du sorcier apres l'attaque
+    louis.to_string() == "Le sorcier, " + "louis" + ", a une énergie de " + "0" + " et " + "2" + " charmes."
 

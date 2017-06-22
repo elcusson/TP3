@@ -27,7 +27,8 @@ class Guerrier():
 
 
     def to_string(self): # tester
-        print("Le guerrier, ", self.nom, ", a une énergie de ", self.energie, " et une force de ", self.force, ".", sep="")
+        return "Le guerrier, " + str(self.nom) + ", a une énergie de " + str(self.energie) + " et une force de " + str(self.force) + "."
+
         """
         Retourne une chaîne du genre : "Le guerrier, nom de Personnage, a une énergie de valeur de 
         l’énergie et une force de valeur de la force."
@@ -113,7 +114,8 @@ if __name__ == "__main__":
     assert baltazar.energie == 40 ##on test si l'énergie a été resetté
     assert baltazar.force == 10 ## on test si la force à été resetté
 
-
+    #méthode to_string
+    assert baltazar.to_string() == "Le guerrier, " + "baltazar" + ", a une énergie de " + "40" + " et une force de " + "10" + "."
 
 
 

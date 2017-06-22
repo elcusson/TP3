@@ -14,7 +14,7 @@ energie_courante = 0
 class Personnage:
 
     def __init__(self, nom=nom, energie_depart=energie_depart_defaut): # constructeur tester
-        self.nom = str(nom)
+        self.nom = self.set_nom(nom)
         self.energie_depart = int(energie_depart)
 
         """
@@ -176,8 +176,8 @@ class Personnage:
         Returns (bool): True si l'assignation a réussi, False sinon.
         """
 
-    # compléter la méthode manquante to_string
-    def to_string(self):
+
+    def to_string(self): # tester
         return "Le personnage, " + str(self.nom) + ", a une énergie de " + str(self.energie_courante) + "."
         """
         Retourne une chaîne du genre : "Le personnage, nom de Personnage, a une énergie de valeur de 
