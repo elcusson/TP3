@@ -9,7 +9,7 @@ force = 0
 
 class Guerrier():
 
-    def __init__(self, nom, energie_depart, energie, force = force_defaut): # tester
+    def __init__(self, nom, energie_depart,energie, force = force_defaut): # tester
         self.nom = str(nom)
         self.energie_depart = int(energie_depart)
         self.energie=int(energie)
@@ -92,7 +92,28 @@ class Guerrier():
 if __name__ == "__main__":
 
     ##méthode __init___
-    baltazar = Guerrier("baltazar",40,20,30)
+
+    baltazar = Guerrier("baltazar",40,20,30) #construit un nom
+    assert baltazar.nom == "baltazar" #test si le nom du guerrier est bien le nom assigné
+    assert baltazar.energie_depart == 40 #test si l'énergie de depart est de 40
+    assert baltazar.energie == 20 #test si l'énergie est de 20
+    assert baltazar.force == 30 #test la force du guerrier
+
+    #méthode attaquer
+
+    baltazar.attaquer(2) ##assigne une valeur de l'attque de 2
+    assert baltazar.energie == 18 ##vérifie si la valeur de l'énergie est diminuer de l'attaque
+    assert baltazar.force == 28 ## on regarde si la force à diminuer après l'attaque
+    baltazar.attaquer(40)   ## assigne une valeur de 40
+    assert baltazar.energie == 0 ##valide si l'energie du guerrier est de 0
+    assert baltazar.force == 0 ## test si la force est à rendu à 0
+
+    #méthode reset energie
+    baltazar.reset_energie() ##on reset l'énergie du guerrier
+    assert baltazar.energie == 40 ##on test si l'énergie a été resetté
+    assert baltazar.force == 10 ## on test si la force à été resetté
+
+
 
 
 
