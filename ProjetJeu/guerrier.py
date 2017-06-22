@@ -87,15 +87,12 @@ class Guerrier():
 
     # setter et getter, a vous de compléter
 
-##test
+
+## Test Unitaire ##
 if __name__ == "__main__":
-    Amadeo=Guerrier("Amadeo", 2, 3)                     ## Nouveau Guerrier amadeo
-    Amadeo.to_string()                                  ## Méthode to string
-    Amadeo.valider_force(4)                             ## retourne le booleen
-    Amadeo.crier()                                      ## Crie du guerrier Amadeo
-    Amadeo.attaquer(1)                                  ## attaque
-    print(Amadeo.energie)                               ## afficher l'energie d'Amadeo après l'attaque
-    Amadeo.reset_energie()                              ## reset l'energie du guerrier
-    print(Amadeo.energie,Amadeo.force)                  ## Affiche l'energie et la force après le reset
+
+    ##méthode __init___
+    baltazar = Guerrier("baltazar",40,20,30)
+
 
 
