@@ -38,7 +38,7 @@ class Personnage:
         la méthode (polymorphisme).
         """
 
-    def est_mort(self): #
+    def est_mort(self): # tester
         if self.energie_courante <= 0:
             return True
         else:
@@ -50,7 +50,7 @@ class Personnage:
         """
 
 
-    def valider_nom(self, nom): #
+    def valider_nom(self, nom): # tester
         if len(str(nom)) < longueur_nom_min or len(str(nom)) > longueur_nom_max:
             return False
         else:
@@ -66,7 +66,7 @@ class Personnage:
         """
 
 
-    def valider_energie_courante(self, energie_courante): #
+    def valider_energie_courante(self, energie_courante): # tester
         if int(energie_courante) < 0 or int(energie_courante) > energie_max:
             return False
         else:
@@ -80,7 +80,7 @@ class Personnage:
         Returns (bool): True si l'énergie est valide, False sinon.
         """
 
-    def valider_energie_depart(self, energie_depart): #
+    def valider_energie_depart(self, energie_depart): # tester
         if int(energie_depart) < energie_depart_min or int(energie_depart) > energie_max:
             return False
         else:
@@ -95,7 +95,7 @@ class Personnage:
         Returns (bool): True si l'énergie de départ est valide, False sinon.
         """
 
-    def reset_energie(self): #
+    def reset_energie(self): # tester
         self.energie_courante = self.energie_depart
         """
         Remet l’énergie courante du personnage à sa valeur de départ.
@@ -197,8 +197,16 @@ if __name__ == "__main__":
     tony.set_energie_depart(-4)
     assert tony.energie_depart == 89
 
-    # méthode set_énergie_courant
+    # méthode set_énergie_courante
     tony.set_energie_courante(89-9)
     assert tony.energie_courante == 80
     tony.set_energie_courante(9999)
     assert tony.energie_courante == 80
+
+    # méthode est_mort
+    tony.energie_courante = -3
+    assert tony.est_mort() == True
+
+    # méthode reset_energie
+    tony.reset_energie()
+    assert energie_courante == energie_depart
