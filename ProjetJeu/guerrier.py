@@ -1,3 +1,6 @@
+##Louis Cusson
+##Anthony Gagnon
+
 #constantes
 import math
 force_defaut = 20
