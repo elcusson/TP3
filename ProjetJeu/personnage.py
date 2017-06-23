@@ -1,4 +1,5 @@
 ### Louis Cusson 111 142 104
+### Anthony Gagnon
 #constantes
 
 energie_depart_defaut = 20
