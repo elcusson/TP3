@@ -17,6 +17,7 @@ class Personnage:
     def __init__(self, nom=nom, energie_depart=energie_depart_defaut): # constructeur tester
         self.nom = self.set_nom(nom)
         self.energie_depart = int(energie_depart)
+        self.energie_courante = int(energie_depart)
 
         """
         Le constructeur du Personnage. Il doit initialiser le nom, l’énergie de départ et l’énergie courante. 
@@ -41,6 +42,7 @@ class Personnage:
 
     def est_mort(self): # tester
         if self.energie_courante <= 0:
+            self.energie_courante = 0
             return True
         else:
             return False
