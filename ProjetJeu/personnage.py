@@ -15,9 +15,9 @@ energie_courante = 0
 class Personnage:
 
     def __init__(self, nom=nom, energie_depart=energie_depart_defaut): # constructeur tester
-        self.nom = str(nom)
-        self.energie_depart = int(energie_depart)
-        self.energie_courante = int(energie_depart)
+        nom_personnage = self.set_nom(str(nom))
+        energie_courante_personnage = self.set_energie_depart(int(energie_depart))
+        energie_courante_personnage = self.set_energie_courante(int(energie_depart))
 
         """
         Le constructeur du Personnage. Il doit initialiser le nom, l’énergie de départ et l’énergie courante. 
@@ -192,8 +192,10 @@ class Personnage:
 if __name__ == "__main__":
 
     # méthode __init__
-    tony = Personnage()                                         # J'insère les valeurs de départ
-    assert tony.nom == ""                                       # Je vérifie si les variables de mon objet correspondent aux valeurs initiales
+    tony = Personnage("Mo", energie_depart=99999)                                         # J'insère les valeurs de départ
+                                                                                          # LES VARIABLES N'EXISTENT PAS PARCE QU'ELLES NE SONT PAS VALIDES
+    tony = Personnage("Louis")
+    assert tony.nom == "Louis"
     assert tony.energie_depart == energie_depart_defaut
 
     # méthode set_nom

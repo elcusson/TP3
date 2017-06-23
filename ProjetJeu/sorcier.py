@@ -13,7 +13,7 @@ class Sorcier( ):
         self.nom = str(nom)
         self.energie_depart = int(energie_depart)
         self.energie = int(energie)
-        self.nbr_charmes = int(nbr_charmes)
+        nbr_charmes_sorcier = self.set_nbr_charmes(int(nbr_charmes))
 
         """
         Le constructeur du Sorcier. Il doit initialiser le nom, l’énergie de départ, l’énergie courante et
@@ -94,6 +94,9 @@ class Sorcier( ):
 if __name__ == "__main__":
 
     ##méthode __init___
+    louis = Sorcier("louis", 30, 30, 99999)
+                                                    # LA VARIABLE NBR_CHARMES N'EXISTE PAS PUISQU'ELLE N'EST PAS VALIDE
+
     louis = Sorcier("louis",30,30,20)
     assert louis.nom == "louis"
     assert louis.energie == 30  ## test si la saisie de la valeur de l'energie est de 3

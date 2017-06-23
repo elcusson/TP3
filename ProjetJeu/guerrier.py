@@ -13,7 +13,7 @@ class Guerrier():
         self.nom = str(nom)
         self.energie_depart = int(energie_depart)
         self.energie=int(energie)
-        self.force = int(force)
+        force_guerrier = self.set_force(int(force))
 
         """
         Le constructeur du Guerrier. Il doit initialiser le nom, l’énergie de départ, l’énergie courante et la force. 
@@ -102,6 +102,8 @@ class Guerrier():
 if __name__ == "__main__":
 
     ##méthode __init___
+    baltazar = Guerrier("baltazar",40,20, 99999)
+                                                    # LA VARIABLE FORCE N'EXISTE PAS PUISQU'ELLE N'EST PAS VALIDE
 
     baltazar = Guerrier("baltazar",40,20,30) #construit un nom
     assert baltazar.nom == "baltazar" #test si le nom du guerrier est bien le nom assigné
