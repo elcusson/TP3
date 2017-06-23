@@ -9,7 +9,7 @@ force = 0
 
 class Guerrier():
 
-    def __init__(self, nom, energie_depart,energie, force = force_defaut): # tester
+    def __init__(self, nom, energie_depart, energie, force=force_defaut): # tester
         self.nom = str(nom)
         self.energie_depart = int(energie_depart)
         self.energie=int(energie)
@@ -27,7 +27,7 @@ class Guerrier():
 
 
     def to_string(self): # tester
-        return "Le guerrier, "+str(self.nom) +  ", a une énergie de "+str(self.energie) + " et une force de "+str(self.force)+"."
+        return "Le guerrier, " + str(self.nom) + ", a une énergie de " + str(self.energie) + " et une force de " + str(self.force) + "."
         """
         Retourne une chaîne du genre : "Le guerrier, nom de Personnage, a une énergie de valeur de 
         l’énergie et une force de valeur de la force."
@@ -114,7 +114,7 @@ if __name__ == "__main__":
     assert baltazar.force == 10 ## on test si la force à été resetté
 
     ##méthode to string
-    baltazar.to_string()== "Le guerrier, "+"baltazar" +  ", a une énergie de "+"40" + " et une force de "+"10"+"."
+    baltazar.to_string()== "Le guerrier, "+"baltazar" + ", a une énergie de "+"40" + " et une force de "+"10"+"."
 
     ## méthode valider force
     assert baltazar.valider_force(30) == True
@@ -122,4 +122,7 @@ if __name__ == "__main__":
 
     ##méthode crier
     assert baltazar.crier() == "Vous allez goûter à la puissance de mon épée!"
+
+    # méthode get_force
+    assert baltazar.get_force() == 10
 

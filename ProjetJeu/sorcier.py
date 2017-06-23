@@ -26,7 +26,7 @@ class Sorcier( ):
         """
 
     def to_string(self): # tester
-        return "Le sorcier ,"+ str(self.nom) + ", a une énergie de "+ str(self.energie)+"et "+str(self.nbr_charmes)+" charmes."
+        return "Le sorcier ,"+ str(self.nom) + ", a une énergie de "+ str(self.energie)+" et "+str(self.nbr_charmes)+" charmes."
         """
         Retourne une chaîne du genre "Le sorcier, nom de Personnage, a une énergie de, valeur de l’énergie et,
         valeur du nombre de charmes, charmes."
@@ -103,7 +103,7 @@ if __name__ == "__main__":
 
     ##méthode to_string
 
-    assert louis.to_string() == "Le sorcier ," + "louis" + ", a une énergie de " + "30" + "et " + "20" + " charmes."
+    assert louis.to_string() == "Le sorcier ," + "louis" + ", a une énergie de " + "30" + " et " + "20" + " charmes."
 
     ##méthode crier
     assert louis.crier() == "Je vais tous vous anéantir!" ##test la méthode crier

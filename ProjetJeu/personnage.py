@@ -15,7 +15,7 @@ energie_courante = 0
 class Personnage:
 
     def __init__(self, nom=nom, energie_depart=energie_depart_defaut): # constructeur tester
-        self.nom = self.set_nom(nom)
+        self.nom = str(nom)
         self.energie_depart = int(energie_depart)
         self.energie_courante = int(energie_depart)
 
@@ -106,7 +106,7 @@ class Personnage:
 
 
     def get_energie_courante(self): #
-        print(self.energie_courante)
+        return self.energie_courante
         """
         Retourne l'énergie courante
         Returns (int): L'énergie courante
@@ -131,7 +131,7 @@ class Personnage:
 
 
     def get_nom(self): #
-        print(self.nom)
+        return self.nom
 
         """
         Retourne le nom.
@@ -156,7 +156,7 @@ class Personnage:
 
 
     def get_energie_depart(self): #
-        print(self.energie_depart)
+        return self.energie_depart
 
         """
         Retourne l'énergie de départ.
@@ -217,6 +217,8 @@ if __name__ == "__main__":
     # méthode est_mort
     tony.energie_courante = -3
     assert tony.est_mort() == True
+    tony.energie_courante = 10
+    assert tony.est_mort() == False
 
     # méthode reset_energie
     tony.reset_energie()
@@ -224,3 +226,24 @@ if __name__ == "__main__":
 
     # méthode to_string
     assert tony.to_string() == "Le personnage, " + "Anthony Gagnon" + ", a une énergie de " + "89" + "."
+
+    # méthode valide_nom
+    assert tony.valider_nom("Anthony Gagnon") == True
+    assert tony.valider_nom("Mo") == False
+
+    # méthode valider_energie_depart
+    assert tony.valider_energie_depart(20) == True
+    assert tony.valider_energie_depart(-20) == False
+
+    # méthode valider_energie_courante
+    assert tony.valider_energie_courante(30) == True
+    assert tony.valider_energie_courante(-30) == False
+
+    # méthode get_nom
+    assert tony.get_nom() == "Anthony Gagnon"
+
+    # méthode get_énergie_courante
+    assert tony.get_energie_courante() == 89
+
+    # méthode get_énergie_départ
+    assert tony.get_energie_depart() == 89
