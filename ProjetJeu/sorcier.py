@@ -90,13 +90,12 @@ class Sorcier( ):
         Returns (bool): True si le nombre de charmes est valide et a été modifié, False sinon.
         """
 
-##test
-
 ## Test Unitaire ##
 if __name__ == "__main__":
 
     ##méthode __init___
     louis = Sorcier("louis",30,30,20)
+    assert louis.nom == "louis"
     assert louis.energie == 30  ## test si la saisie de la valeur de l'energie est de 3
     assert louis.energie_depart == 30  ## test si l'energie de départ du sorcier est de 2
     assert louis.nbr_charmes == 20
@@ -111,6 +110,7 @@ if __name__ == "__main__":
     ## méthode set nbr_charmes
     louis.set_nbr_charmes(2)  ## on assigne un nombre de charme au sorcier
     assert louis.nbr_charmes == 2  ## on test si la valeur du nombre de charmes est celle qu'on lui a assignée
+    assert louis.set_nbr_charmes(2) == True
 
     ##méthode valider nombre de charmes
     assert louis.valider_nbr_charmes(20) == True

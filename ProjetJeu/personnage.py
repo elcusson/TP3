@@ -211,8 +211,10 @@ if __name__ == "__main__":
     # méthode set_énergie_courante
     tony.set_energie_courante(60)
     assert tony.energie_courante == 60
+    assert tony.set_energie_courante(60) == True
     tony.set_energie_courante(9999)
     assert tony.energie_courante == 60
+    assert tony.set_energie_courante(9999) == False
 
     # méthode est_mort
     tony.energie_courante = -3
