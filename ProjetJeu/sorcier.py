@@ -26,7 +26,8 @@ class Sorcier( ):
         """
 
     def to_string(self): # tester
-        return "Le sorcier ," + str(self.nom) + ", a une énergie de " +  str(self.energie) + "et "+ str(self.nbr_charmes) + " charmes."
+        print("Le sorcier ,",self.nom,", a une énergie de ",self.energie,"et ",self.nbr_charmes," charmes.")
+
         """
         Retourne une chaîne du genre "Le sorcier, nom de Personnage, a une énergie de, valeur de l’énergie et,
         valeur du nombre de charmes, charmes."
@@ -34,7 +35,7 @@ class Sorcier( ):
         """
 
     def valider_nbr_charmes(self, nbr_charmes): # tester
-        if int(nbr_charmes) > 0 and int(nbr_charmes) <= nbr_charmes_max:
+        if int(nbr_charmes) > 0 and int(nbr_charmes) < nbr_charmes_max:
             return True
         else:
             return False
@@ -48,7 +49,7 @@ class Sorcier( ):
         """
 
     def crier(self): # tester
-        return "Je vais tous vous anéantir!"
+        print("Je vais tous vous anéantir!")
 
         """
         Retourne le cri du sorcier: "Je vais tous vous anéantir!"
@@ -68,7 +69,7 @@ class Sorcier( ):
         """
 
     def get_nbr_charmes(self): # tester
-        return self.nbr_charmes
+        print(self.nbr_charmes)
         """
         Retourne le nombre de charmes du sorcier.
         Returns (int): Le nombre de charmes du sorcier.
@@ -76,8 +77,9 @@ class Sorcier( ):
         """
 
     def set_nbr_charmes(self, nbr_charmes):
-        if self.valider_nbr_charmes(nbr_charmes) == True:
-            self.nbr_charmes = nbr_charmes
+        if self.valider_nbr_charmes(int(nbr_charmes)) == True:
+            self.nbr_charmes = int(nbr_charmes)
+            return True
         else:
             return False
 
@@ -95,33 +97,14 @@ class Sorcier( ):
 if __name__ == "__main__":
 
     ##méthode __init___
-    louis = Sorcier("louis",20,30,40) #test unitaire pour la classe sorcier
-    assert louis.nom =="louis"  ##test si la saisie du nom est bien "louis"
-    assert louis.nbr_charmes == 40 #test si la saisie du nombre de charme est bien 4
-    assert louis.energie == 30 ## test si la saisie de la valeur de l'energie est de 3
-    assert louis.energie_depart == 20 ## test si l'energie de départ du sorcier est de 2
-
-    ##méthode to_string
-
-    assert louis.to_string() == "Le sorcier ," + "louis" + ", a une énergie de " + "30" + "et "+ "40" + " charmes."
-
-    ##méthode crier
-    assert louis.crier() == "Je vais tous vous anéantir!"
-
-    ## méthode nbr_charmes
-    louis.set_nbr_charmes(2)  ## on assigne un nombre de charme au sorcier
-    assert louis.nbr_charmes == 2 ## on test si la valeur du nombre de charmes est celle qu'on lui a assignée
-
-    ## méthodes attaquer
-    louis.attaquer(6) ## on test la fonction attaquer
-    assert louis.energie == 24 ## test si la valeur de l'énergie du sorcier apres l'attaque
-    louis.attaquer(30)       #test lorsque la valeur de l'attaque est plus grande que l'énergie du sorcier
-    assert louis.energie == 0 #test si l'énergie est rendu à zéro
-
-    ## Méthode set_nbr_charmes
-    louis.set_nbr_charmes(10)     ##set un nombre de charme à 10
-    assert louis.nbr_charmes == 10 ##valide si le nbr de charmes à bien été setter
-    louis.set_nbr_charmes(1000)  ##set un nombre de charme non valide
-    assert louis.nbr_charmes == 10 #valide si le nbr de charmes à changer après une entrée non valide
+    louis = Sorcier("louis",2,3,4)          #test unitaire pour la classe sorcier
+    assert louis.nom =="louis"              ##test si la saisie du nom est bien "louis"
+    assert louis.nbr_charmes == 4           #test si la saisie du nombre de charme est bien 4
+    assert louis.energie == 3               ## test si la saisie de la valeur de l'energie est de 3
+    assert louis.energie_depart == 2        ## test si l'energie de départ du sorcier est de 2
+    louis.set_nbr_charmes(2)                ## on assigne un nombre de charme au sorcier
+    assert louis.nbr_charmes == 2           ## on test si la valeur du nombre de charmes est celle qu'on lui a assignée
+    louis.attaquer(6)                       ## on test la fonction attaquer
+    assert louis.energie == 0               ## test si la valeur de l'énergie du sorcier apres l'attaque
 
 #allo
