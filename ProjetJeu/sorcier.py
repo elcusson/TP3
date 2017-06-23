@@ -124,3 +124,4 @@ if __name__ == "__main__":
     louis.set_nbr_charmes(1000)  ##set un nombre de charme non valide
     assert louis.nbr_charmes == 10 #valide si le nbr de charmes à changer après une entrée non valide
 
+#allo
