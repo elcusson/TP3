@@ -85,7 +85,17 @@ class Guerrier():
         la force maximale sans jamais la dépasser.       
         """
 
-    # setter et getter, a vous de compléter
+    def get_force(self):  ##méthode get force
+        return self.force
+
+
+    def set_force(self,force):
+        if self.valider_force(int(force)) == True:
+            self.force = int(force)
+            return True
+        else:
+            return False
+
 
 
 ## Test Unitaire ##
@@ -125,4 +135,12 @@ if __name__ == "__main__":
 
     # méthode get_force
     assert baltazar.get_force() == 10
+
+    #méthode set_force
+    assert baltazar.set_force(30) == True
+    assert baltazar.force == 30
+
+
+
+
 
